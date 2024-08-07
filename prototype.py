@@ -37,8 +37,8 @@ def design_description(base64Image, api_key):
     return response.json()
 
 
-def design_generation(prompt):
-    client = OpenAI()
+def design_generation(prompt, APIKEY):
+    client = OpenAI(api_key=APIKEY)
 
     response = client.images.generate(
         model="dall-e-3",

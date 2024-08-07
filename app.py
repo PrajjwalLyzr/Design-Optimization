@@ -76,7 +76,7 @@ if API_KEY:
         st.image(img)
         st.markdown('---')
         prompt_for_new_design = descr["choices"][0]["message"]["content"]
-        img_url = design_generation(prompt=prompt_for_new_design)
+        img_url = design_generation(prompt=prompt_for_new_design, APIKEY=API_KEY)
         # st.write(img_url)
         st.subheader('New Design')
         st.image(img_url)
